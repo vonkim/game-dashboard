@@ -40,7 +40,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text
 h4{font-size:.88rem;font-weight:700;margin:16px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--line);}
 .tbl-wrap{overflow-x:auto;margin-bottom:16px;}
 table{width:100%;border-collapse:collapse;font-size:.72rem;white-space:nowrap;}
-th{background:#f1f5f9;font-weight:600;text-align:left;padding:5px 7px;border-bottom:2px solid var(--line);position:sticky;top:0;}
+th{background:#f1f5f9;font-weight:600;text-align:center;padding:5px 7px;border-bottom:2px solid var(--line);position:sticky;top:0;}
 td{padding:4px 7px;border-bottom:1px solid #f1f5f9;color:var(--sub);}
 .num{text-align:right;font-variant-numeric:tabular-nums;}
 .qtr{font-weight:600;color:var(--text);}
@@ -70,6 +70,20 @@ td{padding:4px 7px;border-bottom:1px solid #f1f5f9;color:var(--sub);}
 .game-link:hover{text-decoration:underline;}
 .ma-link{font-size:.76rem;color:var(--blue);text-decoration:none;font-weight:700;}
 .ma-link:hover{text-decoration:underline;}
+.org-chart{font-size:.72rem;}
+.org-top{display:flex;flex-direction:column;align-items:center;gap:0;margin-bottom:12px;}
+.org-line-v{width:2px;height:16px;background:var(--line);}
+.org-box{display:inline-block;padding:6px 14px;border-radius:8px;text-align:center;font-weight:600;font-size:.72rem;line-height:1.4;}
+.org-box small{font-weight:400;font-size:.65rem;color:#94a3b8;}
+.org-dark{background:#1e293b;color:#fff;}
+.org-blue{background:#2563eb;color:#fff;font-size:.68rem;}
+.org-gray{background:#475569;color:#fff;font-size:.68rem;}
+.org-row{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0;}
+.org-branch{flex:1;min-width:100px;text-align:center;}
+.org-sub{font-size:.62rem;color:var(--sub);margin-top:4px;line-height:1.5;}
+.org-note{font-size:.62rem;color:var(--muted);margin-top:8px;padding:6px 10px;background:#f8fafc;border-radius:6px;line-height:1.6;}
+.org-chart h5{font-size:.78rem;font-weight:700;margin:0;padding-bottom:4px;border-bottom:1px solid var(--line);}
+
 .filter-wrap{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:20px;}
 .filter-wrap h4{margin:0 0 8px;font-size:.85rem;}
 .filter-chips{display:flex;flex-wrap:wrap;gap:6px;}
@@ -438,7 +452,69 @@ td{padding:4px 7px;border-bottom:1px solid #f1f5f9;color:var(--sub);}
       </div>
       <div class="sub-sections" style="margin-top:12px;">
         <div class="sub-sec"><h4>관련 뉴스 (11건)</h4><div class="news-list"><div class="news-item"><span class="news-date">2026-04</span><a href="https://zdnet.co.kr/view/?no=20260331170423" target="_blank" rel="noopener" class="news-link">쇠더룬드 회장, 투자 감축 및 구조 재설정 발표</a><span class="news-desc">포트폴리오 정리, 성공 확률 높이는 방향으로 구조 재편</span></div><div class="news-item"><span class="news-date">2026-04</span><a href="https://www.fnnews.com/news/202604011441369134" target="_blank" rel="noopener" class="news-link">던파모바일 중국 서비스를 텐센트에 이관</a><span class="news-desc">네오플이 한국 개발에 집중하는 구조로 개편</span></div><div class="news-item"><span class="news-date">2026-02</span><a href="https://www.ajunews.com/view/20260220164726534" target="_blank" rel="noopener" class="news-link">쇠더룬드 회장직 신설, CEO 이정헌과 투톱 체제</a><span class="news-desc">글로벌 전략·개발 총괄 강화</span></div><div class="news-item"><span class="news-date">2026-01</span><a href="https://www.economytribune.co.kr/news/articleView.html?idxno=3901768" target="_blank" rel="noopener" class="news-link">2025년 매출 4.5조 역대 최대, 아크레이더스 1,400만장</a><span class="news-desc">북미·유럽 매출 364%↑, 메이플 43%↑, 던파 108%↑</span></div><div class="news-item"><span class="news-date">2025-12</span><a href="https://zdnet.co.kr/view/?no=20260104075613" target="_blank" rel="noopener" class="news-link">아크레이더스 2025 스팀어워드 '가장 혁신적 게임' 수상</a><span class="news-desc">엠바크스튜디오 개발, 글로벌 흥행 인정</span></div><div class="news-item"><span class="news-date">2025-12</span><a href="https://www.fnnews.com/news/202604011441369134" target="_blank" rel="noopener" class="news-link">슈퍼바이브 서비스 2026-02-26 종료 발표</a><span class="news-desc">출시 7개월 만에 종료, 결제 전액 환불</span></div><div class="news-item"><span class="news-date">2025-10</span><a href="https://www.fnnews.com/news/202604011441369134" target="_blank" rel="noopener" class="news-link">바람의나라2 개발권 회수, 직접 개발로 전환</a><span class="news-desc">슈퍼캣 계약 종료, 넥슨 직접 개발 착수</span></div><div class="news-item"><span class="news-date">2025-09</span><a href="https://www.businesspost.co.kr/BP?command=article_view&num=409169" target="_blank" rel="noopener" class="news-link">NXC 지분 3차 매각 무산, 4차 추진</a><span class="news-desc">정부 소유 30.6% 지분 매각 반복 실패</span></div><div class="news-item"><span class="news-date">2025-06</span><a href="https://www.etoday.co.kr/news/view/2543178" target="_blank" rel="noopener" class="news-link">텐센트 NXC 지분 인수설 → 최종 무산</a><span class="news-desc">정부 매각 절차에서 무산, 텐센트도 공식 부인</span></div><div class="news-item"><span class="news-date">2025-02</span><a href="https://news.nate.com/view/20250610n23093" target="_blank" rel="noopener" class="news-link">카트라이더: 드리프트 글로벌 서비스 대부분 종료</a><span class="news-desc">흥행 부진으로 한국·대만 PC만 유지</span></div><div class="news-item"><span class="news-date">2025-01</span><a href="https://www.thelec.kr/news/articleView.html?idxno=26841" target="_blank" rel="noopener" class="news-link">강대현·김정욱 공동대표 신임, 14년 만에 공동대표 체제</a><span class="news-desc">이정헌 대표는 일본법인으로 이동</span></div></div></div>
-        <div class="sub-sec"><h4>조직구조</h4></div>
+        <div class="sub-sec"><h4>조직구조</h4><div class="org-chart">
+<div class="org-top">
+  <div class="org-box org-dark">NXC<br><small>넥슨 총 1만여명</small></div>
+  <div class="org-line-v"></div>
+  <div class="org-box org-dark">넥슨코리아<br><small>4,000명 · 6~7개 본부</small></div>
+</div>
+<div class="org-row">
+  <div class="org-branch">
+    <div class="org-box org-blue">퍼블리싱 라이브 본부</div>
+    <div class="org-sub">마케팅 4개팀 (60명)<br>사업 (300~400명)</div>
+  </div>
+  <div class="org-branch">
+    <div class="org-box org-blue">메이플스토리 본부</div>
+    <div class="org-sub">500명+ / 마케팅 (20~30명) + 사업</div>
+  </div>
+  <div class="org-branch">
+    <div class="org-box org-blue">FC 본부</div>
+    <div class="org-sub">마케팅 + 사업</div>
+  </div>
+  <div class="org-branch">
+    <div class="org-box org-blue">슈팅 본부</div>
+    <div class="org-sub">더파이널스 등</div>
+  </div>
+  <div class="org-branch">
+    <div class="org-box org-blue">라이브 본부</div>
+    <div class="org-sub">비주요 게임 라이브 서비스</div>
+  </div>
+  <div class="org-branch">
+    <div class="org-box org-blue">인텔리전스 랩스</div>
+    <div class="org-sub">500~600명 / UA 담당 포함</div>
+  </div>
+</div>
+<div class="org-note">직책: 본부장—부본부장—실장—부실장—팀장—부팀장—파트 / R팀: 종료 스튜디오 멤버 체류 (3년 내 이동 실패 시 퇴사)</div>
+
+<h5 style="margin-top:14px;">주요 자회사 (~6,000명)</h5>
+<div class="org-row">
+  <div class="org-branch">
+    <div class="org-box org-gray">네오플<br><small>1,400명</small></div>
+    <div class="org-sub">던파 · 사이퍼즈 · 던파모바일 · 카잔 · 오버길 · 프로젝트DM<br><small>사업/마케팅/브랜딩 내부 보유</small></div>
+  </div>
+  <div class="org-branch">
+    <div class="org-box org-gray">넥슨게임즈<br><small>1,600명</small></div>
+    <div class="org-sub">서든어택 · V4 · 히트2 · 블루아카이브 · 퍼스트디센던트 · 닥신</div>
+  </div>
+  <div class="org-branch">
+    <div class="org-box org-gray">데브캣<br><small>250명</small></div>
+    <div class="org-sub">마비노기 · 마비노기영웅전 · 어센던트원 · 마비노기모바일</div>
+  </div>
+  <div class="org-branch">
+    <div class="org-box org-gray">엠바크<br><small>250명 · 스웨덴</small></div>
+    <div class="org-sub">더파이널스 · 아크레이더스</div>
+  </div>
+  <div class="org-branch">
+    <div class="org-box org-gray">민트로켓<br><small>50명</small></div>
+    <div class="org-sub">데이브 더 다이버</div>
+  </div>
+  <div class="org-branch">
+    <div class="org-box org-gray">넥슨네트웍스<br><small>550명</small></div>
+    <div class="org-sub">CS / QA</div>
+  </div>
+</div>
+<div class="org-note">큰 스튜디오 200여명, 작은 스튜디오 50여명 / 라이프사이클에 따라 규모 조정<br>기타 법인: 넥슨 일본 · 미국 · 대만 · 태국</div>
+</div></div>
       </div>
     </div>
   </div>

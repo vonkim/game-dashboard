@@ -11268,24 +11268,7 @@ function applyFilter() {
   container.innerHTML=html;
 }
 
-function drawGroupCharts(prefix, title) {
-  const d = CD[prefix], labels = CD.labels;
-  ['rev','ratio','cost','cash','oi'].forEach(s => {
-    const el = document.getElementById('chart-'+prefix+'-'+s);
-    if (el && el._chart) el._chart.destroy();
-  });
-  const c1=document.getElementById('chart-'+prefix+'-rev');
-  c1._chart=new Chart(c1,{type:'bar',data:{labels,datasets:[{label:'매출(억)',data:d.rev,backgroundColor:'rgba(37,99,235,.6)',borderRadius:4,order:2},{label:'영업이익(억)',data:d.oi,type:'line',borderColor:'#059669',borderWidth:2,pointRadius:3,tension:.3,order:1}]},options:{responsive:true,plugins:{title:{display:true,text:title+' 합산 매출/영업이익'},legend:{position:'bottom'}},scales:{y:{ticks:{callback:v=>(v/10000).toFixed(1)+'조'}}}}});
-  const c2=document.getElementById('chart-'+prefix+'-ratio');
-  c2._chart=new Chart(c2,{type:'line',data:{labels,datasets:[{label:'인건비율(%)',data:d.laborR,borderColor:'#ef4444',borderWidth:2,pointRadius:3,tension:.3},{label:'마케팅비율(%)',data:d.adR,borderColor:'#f59e0b',borderWidth:2,pointRadius:3,tension:.3}]},options:{responsive:true,plugins:{title:{display:true,text:title+' 인건비율/마케팅비율'},legend:{position:'bottom'}},scales:{y:{min:0,ticks:{callback:v=>v+'%'}}}}});
-  const c5=document.getElementById('chart-'+prefix+'-cost');
-  c5._chart=new Chart(c5,{type:'bar',data:{labels,datasets:[{label:'인건비(억)',data:d.labor,backgroundColor:'rgba(239,68,68,.55)',borderRadius:4},{label:'마케팅비(억)',data:d.ad,backgroundColor:'rgba(245,158,11,.55)',borderRadius:4}]},options:{responsive:true,plugins:{title:{display:true,text:title+' 인건비/마케팅비 금액'},legend:{position:'bottom'}},scales:{y:{ticks:{callback:v=>v.toLocaleString()+'억'}}}}});
-  const c3=document.getElementById('chart-'+prefix+'-cash');
-  c3._chart=new Chart(c3,{type:'bar',data:{labels,datasets:[{label:'현금성자산(억)',data:d.cash,backgroundColor:'rgba(124,58,237,.5)',borderRadius:4}]},options:{responsive:true,plugins:{title:{display:true,text:title+' 현금성자산'},legend:{display:false}},scales:{y:{ticks:{callback:v=>(v/10000).toFixed(1)+'조'}}}}});
-  const oiR=d.rev.map((r,i)=>r?+(d.oi[i]*100/r).toFixed(1):null);
-  const c4=document.getElementById('chart-'+prefix+'-oi');
-  c4._chart=new Chart(c4,{type:'line',data:{labels,datasets:[{label:'영업이익률(%)',data:oiR,borderColor:'#059669',backgroundColor:'rgba(5,150,105,.1)',fill:true,borderWidth:2,pointRadius:3,tension:.3}]},options:{responsive:true,plugins:{title:{display:true,text:title+' 영업이익률'},legend:{display:false}},scales:{y:{ticks:{callback:v=>v+'%'}}}}});
-}
+// (옛 drawGroupCharts 5차트 버전 제거됨 — drawSixCharts 사용)
 
 function toggleCompany(idx) {
   const body = document.getElementById('body-'+idx);
